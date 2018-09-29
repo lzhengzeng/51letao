@@ -58,8 +58,12 @@
     <script>
         // 检测用户是否登录
         $.ajax({
-            url: 'http://localhost:3000/user/queryUserMessage',
+            url: '/api/user/queryUserMessage',
             type: 'get',
+            // xhrFields: {
+            //     // 让浏览器将 cookie 传到后端
+            //     withCredentials : true
+            // },
             success: function (info) {
                 console.log(info);
 
